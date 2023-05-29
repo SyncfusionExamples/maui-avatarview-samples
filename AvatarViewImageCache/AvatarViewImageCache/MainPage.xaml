@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             x:Class="AvatarViewImageCache.MainPage">
+    <Grid ColumnDefinitions="*,*">
+
+
+        <syncfusion:SfAvatarView ImageSource="avatarviewimage.png" ContentType="Custom"  
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"   
+                           HeightRequest="200"
+                           WidthRequest="400" />
+
+        <syncfusion:SfAvatarView Grid.Column="1" ContentType="Custom"  
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"   
+                           HeightRequest="200"
+                           WidthRequest="400" >
+            <syncfusion:SfAvatarView.ImageSource>
+                <UriImageSource CachingEnabled="True" Uri="https://www.syncfusion.com/blogs/wp-content/uploads/2022/06/Introducing-.NET-MAUI-Avatar-View-Control-thegem-blog-justified.png"
+                           CacheValidity="10" />
+            </syncfusion:SfAvatarView.ImageSource>
+        </syncfusion:SfAvatarView>
+
+
+    </Grid>
+
+</ContentPage>
